@@ -1,0 +1,345 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-image: url("background.jpg");
+  height: 1000px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-box {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 20px;
+  text-align: center;
+  font-size: 2.5em;
+  color: #fff;
+  font-weight: bold;
+}
+
+.title-sex {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.box {
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 15px;
+  max-width: 470px;
+}
+
+.container-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.sex-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sex-buttons input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.sex-buttons label[for="radioMan"] {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.sex-buttons label[for="radioWoman"] {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.sex-buttons label {
+  display: inline-block;
+  background-color: white;
+  padding: 10px 20px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border: 1px solid #f07d37;
+  flex: 1 0 40%;
+  text-align: center;
+  color: black;
+}
+
+.sex-buttons input[type="radio"]:checked + label {
+  background-color: #f07d37;
+  color: white;
+  transition-duration: 0.3s;
+}
+
+.sex-buttons label:hover {
+  color: #f07d37;
+}
+
+.person-age__title,
+.person-height__title,
+.person-weight__title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.person-info span {
+  font-size: 13px;
+  color: rgb(168, 168, 168);
+}
+
+.person-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.person-age,
+.person-height {
+  flex: 1;
+}
+
+.person-age__title,
+.person-age__subtitle,
+.person-height__title,
+.person-height__subtitle,
+.person-weight__title,
+.person-weight__subtitle {
+  display: inline-block;
+}
+
+.person-info input {
+  height: 40px;
+  width: 65px;
+  border-radius: 3px;
+  border-style: none;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 15px;
+}
+
+.person-info input:focus {
+  border-color: #f07d37;
+  outline: none;
+  transition-duration: 0.2s;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.physical-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.min label,
+.low label,
+.med label,
+.high label,
+.vhigh label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.min,
+.low,
+.med,
+.high,
+.vhigh {
+  &-title {
+    color: rgb(168, 168, 168);
+    padding-left: 18px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font-size: 14px;
+  }
+}
+
+.physical input[type="radio"]:checked + label {
+  color: #f07d37;
+  transition-duration: 0.2s;
+}
+
+.physical input[type="radio"] {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid darkgray;
+  border-radius: 50%;
+  outline: none;
+}
+
+.physical input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 60%;
+  margin: 20% auto;
+  border-radius: 50%;
+}
+.physical input[type="radio"]:checked:before {
+  background: #f07d37;
+  transition-duration: 0.2s;
+}
+
+.down-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.count-btn {
+  justify-self: flex-start;
+}
+
+.count-btn button {
+  border-style: none;
+  background-color: #f07d37;
+  height: 40px;
+  width: 150px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.erase {
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.erase a {
+  text-decoration: none;
+  color: rgb(231, 0, 0);
+}
+
+.text-erase::before {
+  content: "× ";
+  font-size: 30px;
+  vertical-align: middle;
+  padding-bottom: 5px;
+  margin-right: -5px;
+}
+
+.text-erase:hover {
+  color: rgb(133, 30, 30);
+}
+
+.vhigh-title {
+  padding-bottom: 30px;
+}
+
+@keyframes smooth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.answer-box {
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 15px;
+  max-width: 470px;
+  height: 170px;
+  display: none;
+  transition-duration: 0.5s;
+  animation: smooth 1s ease;
+}
+
+.answer-box-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.answer-box-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f07d37;
+}
+
+.answer-result-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+// .answer-result-stable {
+//   // width: 33%;
+//   // flex: 1;
+// }
+
+// .answer-result-loss {
+//   // width: 33%;
+// }
+
+// .answer-result-gain {
+//   // width: 33%;
+//   // flex: 1;
+// }
+
+.answer-result-stable span,
+.answer-result-loss span,
+.answer-result-gain span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.answer-result-stable__subtitle,
+.answer-result-loss__subtitle,
+.answer-result-gain__subtitle {
+  font-size: 16px;
+  color: rgb(167, 167, 167);
+}
+
+@media screen and (max-width: 409px) {
+  .erase {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .person-age {
+    display: block;
+  }
+}

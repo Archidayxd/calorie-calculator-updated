@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+<form>
+
+<div class="container">
+    <div class="wrapper">
+        <div class="title">Счётчик калорий</div>
+        <div class="box">
+            <div class="container-box">
+            <div class="sex">
+                <div class="title-sex">Пол</div>
+                <div class="sex-buttons">
+                    <input type="radio" id="radioMan" name="radioSex" value="Мужчина" checked>
+                        <label for="radioMan">Мужчина</label>
+
+                        <input type="radio" id="radioWoman" name="radioSex" value="woman">
+                        <label for="radioWoman">Женщина</label>
+                </div>
+            </div>
+            <div class="person-info">
+                <div class="person-age">
+                    <div class="person-age__title">Возраст
+                        <span>лет</span>
+                    </div>
+                    <div class="person-age__inputfield">
+                        <input type="number" id="inputAge" name="inputAge"
+                        min="1" max="120" placeholder="0">
+                    </div>
+                </div>
+                <div class="person-height">
+                    <div class="person-height__title">Рост
+                        <span>см</span>
+                    </div>
+                    <div class="person-height__inputfield">
+                        <input type="number" id="inputHeight" name="inputHeight"
+                        min="1" max="250" placeholder="0">
+                    </div>
+                </div>
+                <div class="person-weight">
+                    <div class="person-weight__title">Вес
+                        <span>кг</span>
+                    </div>
+                    <div class="person-weight__inputfield">
+                        <input type="number" id="inputWeight" name="inputWeight"
+                        min="10" max="450" placeholder="0">
+                    </div>
+                </div>
+            </div>
+            <div class="physical">
+                <div class="physical-title">Физическая активность</div>
+                <div class="min">
+                      <input type="radio" id="minimumLevel" name="level" value="minimumLevel" checked>
+                       <label for="huey">Минимальная</label>
+                    <div class="min-title">Сидячая работа и нет физический нагрузок</div>
+                </div>
+                <div class="low">
+                        <input type="radio" id="lowLevel" name="level" value="lowLevel">
+                        <label for="huey">Низкая</label>
+                    <div class="low-title">Редкие, нерегулярные тренировки, активность в быту</div>
+                </div>
+                <div class="med">
+                        <input type="radio" id="mediumLevel" name="level" value="mediumLevel">
+                        <label for="huey">Средняя</label>
+                    <div class="med-title">Тренировки 3-5 раз в неделю</div>
+                </div>
+                <div class="high">
+                        <input type="radio" id="highLevel" name="level" value="highLevel">
+                        <label for="huey">Высокая</label>
+                    <div class="high-title">Тренировки 6-7 раз в неделю</div>
+                </div>
+                <div class="vhigh">
+                        <input type="radio" id="veryHighLevel" name="level" value="veryHighLevel">
+                        <label for="huey">Очень высокая</label>
+                    <div class="vhigh-title">больше 6 тренировок в неделю и физическая работа</div>
+                </div>
+            </div>
+            <div class="down-buttons">
+                <div class="count-btn">
+                <button type="submit" onclick="countBtn()" id="countButton">Рассчитать</button>
+                </div>
+                <div class="erase">
+                <a href="" onclick="eraseBtn()" id="eraseButton"><span class="text-erase">Очистить поля и расчёт</span></a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</form>
+
+<div class="answer-box" id="answerBox">
+    <div class="answer-box-wrapper">
+        <div class="answer-box-title"><span>Ваша норма калорий</span></div>
+        <div class="answer-result-flex">
+            <div class="answer-result-stable"><span id="firstResult"></span>
+                <div class="answer-result-stable__subtitle">поддержание <br>веса</div>
+            </div>
+            <div class="answer-result-loss"><span id="secondResult"></span>
+                <div class="answer-result-loss__subtitle">снижение <br> веса</div>
+            </div>
+            <div class="answer-result-gain"><span id="thirdResult"></span>
+                <div class="answer-result-gain__subtitle">набор веса</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
